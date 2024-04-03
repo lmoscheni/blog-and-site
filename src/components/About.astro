@@ -1,10 +1,30 @@
 ---
-const today = new Date();
+import Section from "./Section.astro";
 ---
 
-<footer class="mt-14 p-3 text-center">
-	&copy; {today.getFullYear()} made by Leandro Moscheni with ❤️. All rights reserved.
-	<div class="p-5 flex flex-row gap-5 justify-center items-center">
+<Section id="about">
+	<h3 class="mt-14 mb-8 col-span-2 text-center text-4xl">About</h3>
+
+	<div class="size-[300px] md:size-[400px] rounded-xl overflow-hidden">
+		<img
+			class="object-scale-down"
+			src="/public/profile-about.webp"
+			alt=""
+		/>
+	</div>
+
+	<p>
+		Hi! I'm Leandro a Software Developer from Argentina! I like programming,
+		shooting photos, pizza, coffee, and other stuff!
+	</p>
+	<p>
+		I have more than 8 years of developing for small, medium, and big
+		companies from LATAM; working on the backend and frontend, using NodeJs,
+		TypeScript, Java, Golang, and others!
+	</p>
+	<p>For more info, you can check my social network in the section below!</p>
+
+	<div class="p-5 rounded-xl flex gap-5 bg-neutral-800">
 		<a
 			href="https://github.com/lmoscheni"
 			target="_blank"
@@ -29,7 +49,7 @@ const today = new Date();
 		>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
-				class="p-1.5 stroke-white fill-white"
+				class="bg-blue-600 p-1.5 rounded-xl stroke-white fill-white"
 				x="0px"
 				y="0px"
 				width="42"
@@ -60,4 +80,15 @@ const today = new Date();
 			</svg>
 		</a>
 	</div>
-</footer>
+
+	<p>
+		For more info contact me through the <a
+			href="#contact"
+			class="italic text-indigo-300">contact form!</a
+		>
+	</p>
+	<p>
+		On the other hand... if you came from my blog, thank you for reading
+		me!!! The best!
+	</p>
+</Section>
