@@ -49,7 +49,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 							}
 						</div>
 
-						<h1 class="pt-3 text-5xl">{title}</h1>
+						<h1 class="md:pt-3 text-4xl md:text-5xl">{title}</h1>
 						<div
 							class="py-2 px-3 rounded-full bg-neutral-800 text-sm"
 						>
@@ -59,7 +59,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 							>Me
 						</div>
 					</div>
-					<div class="pt-8">
+					<div class="pt-8 w-full">
 						<slot />
 					</div>
 				</article>
