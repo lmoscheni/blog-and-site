@@ -1,0 +1,23 @@
+---
+import HeaderLink from "./HeaderLink.astro";
+import { SITE_TITLE } from "../consts";
+---
+
+<header class="text-neutral-100">
+	<nav class="flex flex-row justify-between items-center align-middle">
+		<a href="/" class="p-3 group text-3xl font-bold text-indigo-500">
+			<span class="group-hover:text-neutral-300"
+				>LM<span class="text-neutral-300 group-hover:text-indigo-500"
+					>.</span
+				></span
+			>
+		</a>
+
+		<div class="p-3 flex flex-row gap-5 text-xl">
+			<HeaderLink href="/">Home</HeaderLink>
+			<HeaderLink href="/blog">Blog</HeaderLink>
+			<HeaderLink href="/#about">About</HeaderLink>
+			<HeaderLink href="/#contact">Contact</HeaderLink>
+		</div>
+	</nav>
+</header>
