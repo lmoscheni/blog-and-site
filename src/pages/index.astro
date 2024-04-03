@@ -7,7 +7,7 @@ import Form from "../components/Form.astro";
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
@@ -18,7 +18,7 @@ import Form from "../components/Form.astro";
 			<Header />
 			<main class="px-5 flex flex-col items-center">
 				<div
-					class="w-full mt-36 grid grid-cols-1 md:grid-cols-2 items-center align-middle"
+					class="w-full mt-14 md:mt-36 grid grid-cols-1 md:grid-cols-2 items-center align-middle"
 				>
 					<div>
 						<h1
@@ -59,12 +59,14 @@ import Form from "../components/Form.astro";
 					</div>
 				</div>
 
-				<div class="mt-20 grid grid-cols-2 gap-10 items-center">
+				<div
+					class="mt-20 grid grid-cols-1 md:grid-cols-2 gap-10 items-center"
+				>
 					<h3 class="mt-14 mb-8 col-span-2 text-center text-4xl">
 						🔎 A brief intro
 					</h3>
 					<div
-						class="w-full max-w-4xl p-4 rounded-xl bg-neutral-800 md:text-lg font-semibold font-mono"
+						class="col-span-2 md:col-span-1 w-full max-w-4xl p-4 rounded-xl bg-neutral-800 md:text-lg font-semibold font-mono"
 					>
 						<div class="text-red-500">+8 years of Exprience</div>
 						<div class="text-blue-500">+4 companies</div>
@@ -74,17 +76,19 @@ import Form from "../components/Form.astro";
 					</div>
 					<div class="flex flex-col justify-center">
 						<div
-							class="p-8 text-center self-center size-40 text-8xl rounded-full bg-indigo-400 animate-spin"
+							class="p-4 md:p-8 text-center self-center size-23 md:size-40 text-8xl rounded-full bg-indigo-400 animate-spin"
 						>
 							⚙️
 						</div>
 					</div>
 					<div class="flex flex-col justify-center">
 						<div
-							class="p-8
+							class="p-4
+							md:p-8
 							text-center
 							self-center
-							size-40
+							size-32
+							md:size-40
 							text-8xl
 							rounded-full
 							bg-indigo-700 animate-pulse"
@@ -93,7 +97,7 @@ import Form from "../components/Form.astro";
 						</div>
 					</div>
 					<div
-						class="w-3xl p-4 rounded-xl bg-neutral-800 md:text-lg font-semibold font-mono"
+						class="col-span-2 md:col-span-1 w-3xl p-4 rounded-xl bg-neutral-800 md:text-lg font-semibold font-mono"
 					>
 						<div class="text-red-500">Problem solver</div>
 						<div class="text-blue-500">Techie guy</div>
@@ -110,7 +114,7 @@ import Form from "../components/Form.astro";
 
 				<section
 					id="about"
-					class="mt-14 p-10 text-lg flex flex-col items-center justify-center gap-5"
+					class="mt-14 text-lg flex flex-col items-center justify-center gap-5"
 				>
 					<h3 class="mt-14 mb-8 col-span-2 text-center text-4xl">
 						About
@@ -212,7 +216,7 @@ import Form from "../components/Form.astro";
 				</section>
 				<section
 					id="contact"
-					class="w-full mt-14 p-10 text-lg flex flex-col items-center justify-center gap-5"
+					class="w-full mt-14 text-lg flex flex-col items-center justify-center gap-5"
 				>
 					<h3 class="mt-14 mb-8 text-center text-4xl">✉️ Contact</h3>
 					<p>
