@@ -3,9 +3,9 @@ import HeaderLink from "./HeaderLink.astro";
 import { SITE_TITLE } from "../consts";
 ---
 
-<header class="sticky top-0 z-50 bg-neutral-900 text-neutral-100">
-	<nav class="flex flex-row justify-between items-center align-middle">
-		<a href="/" class="p-3 group text-3xl font-bold text-indigo-500">
+<header class="sticky top-0 w-full z-50 bg-neutral-900 text-neutral-100">
+	<nav class="w-full flex flex-row justify-between items-center align-middle">
+		<a href="/" class="py-3 group text-3xl font-bold text-indigo-500">
 			<span class="group-hover:text-neutral-300"
 				>LM<span class="text-neutral-300 group-hover:text-indigo-500"
 					>.</span
@@ -13,10 +13,10 @@ import { SITE_TITLE } from "../consts";
 			>
 		</a>
 
-		<div class="p-3 flex flex-row gap-5 md:text-xl">
-			<HeaderLink href="/" class="hidden md:block">Home</HeaderLink>
-			<HeaderLink href="/#about">About</HeaderLink>
-			<HeaderLink href="/#contact">Contact</HeaderLink>
+		<div class="py-3 flex flex-row gap-5 md:text-xl">
+			<HeaderLink href="/" class="">Home</HeaderLink>
+			<!-- <HeaderLink href="/#about">About</HeaderLink> -->
+			<!-- <HeaderLink href="/#contact">Contact</HeaderLink> -->
 			<HeaderLink href="/blog">Blog</HeaderLink>
 		</div>
 	</nav>

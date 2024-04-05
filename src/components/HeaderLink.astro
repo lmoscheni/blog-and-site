@@ -5,6 +5,8 @@ type Props = HTMLAttributes<"a">;
 
 const { href, class: className, ...props } = Astro.props;
 
+console.log("RENDER");
+
 const { pathname, hash } = Astro.url;
 const subpath = pathname.match(/[^\/]+/g);
 const isActive =
@@ -14,6 +16,7 @@ const isActive =
 ---
 
 <a
+	id={`nav-link-${hash ?? pathname}`}
 	href={href}
 	class:list={[
 		className,
@@ -28,13 +31,21 @@ const isActive =
 >
 	<slot />
 </a>
-<!-- <style>
-	a {
-		display: inline-block;
-		text-decoration: none;
-	}
-	a.active {
-		font-weight: bolder;
-		text-decoration: underline;
-	}
-</style> -->
+
+<script>
+	const { pathname, hash } = window.location;
+
+	console.log("BLA", pathname, hash);
+
+	const a = document.getElementById(`nav-link-${hash ?? pathname}`);
+
+	a?.addEventListener("click", () => {
+		console.log("click");
+		a.classList.add(
+			"text-indigo-500",
+			"font-medium",
+			"underline",
+			"underline-offset-8",
+		);
+	});
+</script>
